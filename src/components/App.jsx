@@ -29,11 +29,11 @@ export class App extends Component {
       alt: tags,
     });
   };
-  render ({
+  render() {
     return (
       <>
         <SearchBar onSubmit={this.handleFormSubmit} />
       </>
     );
-  })
+  }
 };
