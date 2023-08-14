@@ -1,7 +1,24 @@
-const Searchbar = onSubmit => {
-  return (
-    <header class="searchbar">
-      <form class="form">
+export class SearchBar extends Component {
+  state = {
+    searchQuery: '',
+  };
+
+  handleChange = evt => {
+    this.setState({ searchQuery: evt.currentTarget.value.toLowerCase() });
+  };
+  handleSubmit = evt => {
+    evt.preventDefault();
+    if (this.state.searchQuery.trim() === '') {
+      toast.error('Please enter something');
+      return;
+    }
+    this.props.onSubmit(this.state.searchQuery);
+    this.setState({ searchQuery: '' });
+  };
+  render() {
+    return (
+      <header>
+      <form onSubmit={this.handleSubmit}>
         <button type="submit" class="button">
           <span class="button-label">Search</span>
         </button>
@@ -12,9 +29,14 @@ const Searchbar = onSubmit => {
           autocomplete="off"
           autofocus
           placeholder="Search images and photos"
+          value={this.state.searchQuery}
+          onChange={this.handleChange}
         />
       </form>
     </header>
-  );
+    );
+  }
+}
+SearchBar.propTypes = {
+  onSubmit: PropTypes.func,
 };
-export default Searchbar;
