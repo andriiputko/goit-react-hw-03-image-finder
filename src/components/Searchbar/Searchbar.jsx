@@ -1,4 +1,9 @@
-export class SearchBar extends Component {
+import { Component } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import PropTypes from 'prop-types';
+
+export default class SearchBar extends Component {
   state = {
     searchQuery: '',
   };
@@ -19,15 +24,15 @@ export class SearchBar extends Component {
     return (
       <header>
       <form onSubmit={this.handleSubmit}>
-        <button type="submit" class="button">
-          <span class="button-label">Search</span>
+        <button type="submit" >
+          <span >Search</span>
         </button>
 
         <input
-          class="input"
+        
           type="text"
-          autocomplete="off"
-          autofocus
+          autoComplete="off"
+          autoFocus
           placeholder="Search images and photos"
           value={this.state.searchQuery}
           onChange={this.handleChange}
