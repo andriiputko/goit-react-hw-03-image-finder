@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import cl from "./ImageGalleryItem.module.css"
 
 const ImageGalleryItem = ({tags, smallUrl, selectedImage}) => {
   return (
-    <li>
-      <img src={smallUrl} alt={tags} onClick={selectedImage} />
+    <li className={cl.li}>
+      <img className={cl.image} src={smallUrl} alt={tags} onClick={selectedImage} />
     </li>
   );
 };

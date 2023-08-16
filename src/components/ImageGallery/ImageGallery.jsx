@@ -1,9 +1,10 @@
 import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
 import PropTypes from 'prop-types';
+import cl from "./ImageGallery.module.css"
 
 const ImageGallery = ({ images, selectedImage }) => {
   return (
-    <ul>
+    <ul className={cl.list}>
         {images.map(({id, webformatURL, tags, largeImageURL}) => (
         
           <ImageGalleryItem
