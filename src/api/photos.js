@@ -10,24 +10,3 @@ export async function getPhotos(searchQuery, page) {
     );
     return response.data;
   };
-
-
-
-
-
-// export const h = async () => {
-//     // const params = new URLSearchParams ({
-//     //     q: searchQuery,
-//     //     page,
-//     //     per_page
-//     // })
-//     const responce = await fetch(`${BASE_URL}/?key=${KEY}&q=nature}`)
-//     if (!responce.ok) {
-//         throw new Error("Something went wrong")
-//     }
-//     return responce.json;
-    
-// };
-
-
-// // id, searchQuery, page, per_page, webformatURL, largeImageURL

@@ -98,6 +98,7 @@ export class App extends Component {
     const { images, status, selectedImage, alt, error } = this.state;
     return (
       <>
+      
         <SearchBar onSubmit={this.handleFormSubmit} />
         <ToastContainer autoClose={3000} theme="colored" pauseOnHover />
         {status === 'pending' && <Loader />}

@@ -30,7 +30,7 @@ export default class Modal extends Component {
     return createPortal(
       <div className={cl.backdrop} onClick={this.modalBackdropClick}>
         <div>
-          <img src={selectedImage} alt={tags} />
+          <img className={cl.image} src={selectedImage} alt={tags} />
         </div>
       </div>,
       modalRoot

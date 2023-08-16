@@ -1,10 +1,12 @@
 .li {
     width: 550px;
+    transition: 300ms;
     
 }
 
 .li:hover {
     cursor: zoom-in;
+    scale: 1.05;
 }
 
 .image {
