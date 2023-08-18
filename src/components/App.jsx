@@ -113,7 +113,7 @@ export class App extends Component {
             selectedImage={this.handleSelectedImage}
           />
         )}
-        {images.length > 0 && images.length !== this.totalHits && (
+        {images.length > 0 && images.length !== this.state.totalHits && (
           <LoadMoreButton onClick={this.loadMore} />
         )}
         {selectedImage && (
